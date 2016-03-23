@@ -11,18 +11,12 @@
 
             reader.onload = function (e) {
                 var result = reader.result;
-
                 var tableData = result.split("\n");
-
                 var myTable = document.createElement("table");
                 var tblBody = document.createElement("tbody");
 
                 for (var i = 0; i < tableData.length; i++) {
-
                     var row = document.createElement("tr");
-
-                    console.log(tableData[i]);
-
                     var x = tableData[i].split(", ");
 
                     for (var a = 0; a < x.length; a++) {
@@ -31,8 +25,6 @@
 
                         cell.appendChild(cellText);
                         row.appendChild(cell);
-
-                        console.log(x[a]);
                     }
                     tblBody.appendChild(row);
                 }
